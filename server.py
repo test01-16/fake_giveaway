@@ -6,8 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return redirect(url_for("eth_world"))
-
+    #return redirect(url_for("eth_world"))
+    return {"status":200}
+    
 @app.route('/eth')
 def eth_world():
     return render_template("eth.html")
